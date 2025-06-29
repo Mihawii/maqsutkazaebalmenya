@@ -181,6 +181,20 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+  .about-content img {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto 1rem auto !important;
+    display: block !important;
+    border-radius: 10px !important;
+  }
+  .about-text, .about-form {
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box;
+    padding: 0.5rem 0.2rem !important;
+    margin: 0 auto 1rem auto !important;
+  }
   .about-form {
     padding: 1rem;
     border-radius: 8px;

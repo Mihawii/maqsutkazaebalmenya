@@ -130,17 +130,38 @@ h6 {
 
 
 @media (max-width: 600px) {
+  .hero-section-inner {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
+    padding: 0.5rem 0.2rem !important;
+  }
+  .hero-highlight {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    margin: 0 auto !important;
+    font-size: 1.2rem !important;
+    padding: 1.1rem 0.5rem !important;
+    border-radius: 1.2rem !important;
+    box-sizing: border-box;
+  }
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem !important;
+    text-align: center !important;
   }
-
   .hero-description {
-    font-size: 1rem;
+    font-size: 1rem !important;
+    text-align: center !important;
   }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: var(--spacing-sm);
+  .hero-section-inner button, .hero-section-inner .register-btn {
+    font-size: 1rem !important;
+    padding: 0.7rem 0.5rem !important;
+    border-radius: 1rem !important;
+    margin: 1rem auto 0 auto !important;
+    display: block !important;
+    width: 90vw !important;
+    max-width: 95vw !important;
   }
 }
 
