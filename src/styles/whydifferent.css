@@ -1,0 +1,178 @@
+.why-different-section {
+  padding: 6rem 2rem 4rem;
+  background: var(--bg-primary);
+}
+
+.why-different-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-different-container h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+}
+
+.why-different-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.why-card {
+  position: relative;
+  background: var(--bg-secondary);
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 520px;
+  padding: 2.2rem 2.5rem 2.2rem 2.5rem;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid var(--border-color);
+  transform: translateY(0);
+}
+
+.why-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--primary-gradient-middle);
+}
+
+.why-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 1;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.why-card-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.why-card-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--primary-gradient-start);
+  margin-bottom: 0.5rem;
+}
+
+.why-card-icon {
+  margin-bottom: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover .why-card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.why-card-icon svg {
+  display: block;
+  width: 2.2em;
+  height: 2.2em;
+  stroke: var(--primary-gradient-start);
+}
+
+/* Gold gradient definition for icons */
+.why-different-section svg defs {
+  /* nothing here, just for structure */
+}
+
+.why-different-section .why-card-icon svg {
+  stroke: url(#gold-gradient);
+}
+
+.why-different-section .why-card-icon svg linearGradient {
+  /* fallback for browsers that support it */
+}
+
+/* Fallback for browsers that don't support SVG gradients */
+.why-card-icon svg:not([stroke*="url"]) {
+  stroke: var(--primary-gradient-start);
+}
+
+.why-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.why-card:hover .why-card-title {
+  color: var(--primary-gradient-middle);
+}
+
+.why-card-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.why-card:hover .why-card-desc {
+  color: var(--text-primary);
+}
+
+@media (max-width: 1100px) {
+  .why-different-cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .why-card {
+    max-width: 95vw;
+    padding: 2rem 1.2rem 1.5rem 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-different-section {
+    padding: 2rem 0.5rem 1rem;
+  }
+
+  .why-card {
+    min-height: 220px;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+
+  .why-different-container h2 {
+    font-size: 1.8rem;
+    color: var(--text-color) !important;
+  }
+}
+
+.why-card-bg-light {
+  display: block;
+}
+
+.why-card-bg-dark {
+  display: none;
+}
+
+.why-card-icon {
+  margin-bottom: 0.7rem;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+.why-card:hover .why-card-icon {
+  transform: scale(1.1) rotate(5deg);
+}

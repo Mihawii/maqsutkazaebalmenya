@@ -1,0 +1,89 @@
+/* What You Will Learn Section - FIXED */
+.what-will-learn-section {
+  padding: 6rem 2rem 4rem;
+  background: var(--bg-primary);
+}
+.what-will-learn-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.what-will-learn-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+}
+.section-subheader {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  will-change: transform;
+  cursor: grab;
+}
+.carousel-track:active {
+  cursor: grabbing;
+}
+
+.carousel-item {
+  background: var(--text-white);
+  border: 2px solid var(--border-color);
+  border-radius: 32px;
+  box-shadow: 0 4px 24px var(--shadow);
+  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-item-header {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+  color: var(--text-start);
+  border-radius: 32px;
+}
+.carousel-item-title {
+  font-weight: 1000px!important;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  text-align: center;
+  color: var(--text-black);
+  line-height: 1.5;
+}
+.carousel-item-description {
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.carousel-indicators-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.carousel-indicators {
+  display: flex;
+  gap: 8px;
+}
+.carousel-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-secondary);
+  transition: background 0.2s ease;
+}
+.carousel-indicator.active {
+  background: var(--text-start);
+} 

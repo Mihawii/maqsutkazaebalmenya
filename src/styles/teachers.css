@@ -1,0 +1,272 @@
+/* Teachers Section */
+.teachers {
+  padding: 6rem 2rem;
+  background: var(--bg-secondary);
+}
+
+.teachers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teachers-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: var(--text-primary);
+}
+
+.teacher-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.teacher-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  background: var(--bg-primary);
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.10);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.teacher-item:hover {
+  box-shadow: 0 8px 32px var(--focus-ring);
+}
+
+.teacher-item.reverse {
+  direction: rtl;
+}
+
+.teacher-item.reverse>* {
+  direction: ltr;
+}
+
+.teacher-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.teacher-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.teacher-logo-corner {
+  position: absolute;
+  top: 10px !important;
+  left: 5px !important;
+  width: 150px !important;
+  height: 150px !important;
+  object-fit: cover !important;
+  border-radius: 100px !important;
+  background: var(--bg-primary);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  border: 2px solid var(--border-color);
+  z-index: 10;
+  transform: translateY(0);
+}
+
+.teacher-logo-corner.right {
+  left: auto !important;
+  right: 5px !important;
+}
+
+.teacher-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.teacher-title {
+  font-size: 1.1rem;
+  color: var(--text-middle);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.teacher-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.teacher-achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.achievement {
+  /* color: var(--text-color); */
+  color: var(--text-white);
+  font-size: 0.95rem;
+  font-weight: 500;
+  /* background: var(--secondary-color); */
+  background: var(--text-primary);
+  border-radius: 10px;
+  padding: 6px 14px;
+  display: inline-block;
+}
+.achievement:hover{
+  background: var(--text-start);
+}
+
+/* Image-only Swiper for Teachers (3 per view, minimal overlay) */
+.teacherimg-swiper-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 48px auto;
+  position: relative;
+}
+
+.teacherimg-swiper {
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.teacherimg-swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #222;
+}
+
+.teacherimg-swiper-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+  transition: filter 0.3s;
+}
+
+.teacherimg-swiper-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  color: #fff;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  text-align: center;
+}
+
+.teacherimg-swiper-slide:hover .teacherimg-swiper-img,
+.teacherimg-swiper-slide:focus-within .teacherimg-swiper-img {
+  filter: brightness(0.45);
+}
+
+.teacherimg-swiper-slide:hover .teacherimg-swiper-overlay,
+.teacherimg-swiper-slide:focus-within .teacherimg-swiper-overlay {
+  opacity: 1;
+}
+
+.teacherimg-swiper-overlay-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+
+.teacherimg-swiper-overlay-title {
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+  opacity: 0.85;
+}
+
+.teacherimg-swiper-overlay-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.teacherimg-swiper-overlay-feature {
+  font-size: 0.98rem;
+  color: #fff;
+  font-weight: 500;
+  max-width: 320px;
+  word-break: break-word;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  .teacherimg-swiper-section {
+    max-width: 98vw;
+    padding: 0 2vw;
+  }
+
+  .teacherimg-swiper-slide {
+    height: 340px;
+    border-radius: 14px;
+  }
+
+  .teacherimg-swiper-img {
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  .teacherimg-swiper-slide {
+    height: 260px;
+  }
+}
+
+@media (max-width: 700px) {
+  .teacherimg-swiper-slide {
+    height: 180px;
+  }
+
+  .teacherimg-swiper-overlay-name {
+    font-size: 1.1rem;
+  }
+
+  .teacherimg-swiper-overlay-title {
+    font-size: 0.95rem;
+  }
+
+  .teacherimg-swiper-overlay-feature {
+    font-size: 0.92rem;
+  }
+}
+
+/* Move Swiper pagination dots below the images for teacher image Swiper */
+.teacherimg-swiper .swiper-pagination {
+  position: static !important;
+  margin-top: 18px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .teacherimg-swiper .swiper-pagination {
+    margin-top: 10px;
+  }
+}

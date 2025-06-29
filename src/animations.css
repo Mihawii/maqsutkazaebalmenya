@@ -1,0 +1,659 @@
+/* Animation Classes */
+[data-animate-section] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate-section].animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide Animations */
+[data-animate="slide-left"] {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate="slide-right"] {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate="slide-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate="fade-up"] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate="scale"] {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation Delays */
+[data-animate-delay="100"] {
+  transition-delay: 100ms;
+}
+[data-animate-delay="200"] {
+  transition-delay: 200ms;
+}
+[data-animate-delay="300"] {
+  transition-delay: 300ms;
+}
+[data-animate-delay="400"] {
+  transition-delay: 400ms;
+}
+[data-animate-delay="500"] {
+  transition-delay: 500ms;
+}
+[data-animate-delay="600"] {
+  transition-delay: 600ms;
+}
+[data-animate-delay="700"] {
+  transition-delay: 700ms;
+}
+[data-animate-delay="800"] {
+  transition-delay: 800ms;
+}
+[data-animate-delay="900"] {
+  transition-delay: 900ms;
+}
+[data-animate-delay="1000"] {
+  transition-delay: 1000ms;
+}
+[data-animate-delay="1100"] {
+  transition-delay: 1100ms;
+}
+[data-animate-delay="1200"] {
+  transition-delay: 1200ms;
+}
+
+/* Animation States */
+/* .animate-in [data-animate] { opacity: 1; transform: translate(0) scale(1); }  -- removed legacy */
+
+/* Animation Groups */
+[data-animate-group] {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.animate-in [data-animate-group] {
+  opacity: 1;
+}
+
+/* Animation Zones */
+.zone-left {
+  position: relative;
+  width: 33.33%;
+  left: 0;
+}
+
+.zone-center {
+  position: relative;
+  width: 33.33%;
+  left: 33.33%;
+}
+
+.zone-right {
+  position: relative;
+  width: 33.33%;
+  left: 66.66%;
+}
+
+/* Base Animation Classes */
+.animate-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animation States */
+/* .animate-card.visible, .animate-text.visible { opacity: 1; transform: translate(0); } -- removed legacy */
+
+/* Direction-based Animations */
+.animate-from-left {
+  transform: translateX(-100px);
+}
+
+.animate-from-right {
+  transform: translateX(100px);
+}
+
+.animate-from-bottom {
+  transform: translateY(100px);
+}
+
+/* Animation Delays */
+.delay-1 {
+  transition-delay: 0.1s;
+}
+.delay-2 {
+  transition-delay: 0.2s;
+}
+.delay-3 {
+  transition-delay: 0.3s;
+}
+.delay-4 {
+  transition-delay: 0.4s;
+}
+.delay-5 {
+  transition-delay: 0.5s;
+}
+
+/* Initial States */
+[data-animate="card"] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+[data-animate="text"] {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Animation Classes */
+[data-animate="card"].visible {
+  opacity: 1;
+  transform: translate(0);
+}
+[data-animate="text"].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Position-based animations */
+[data-animate="card"][data-position="left"] {
+  transform: translateX(-50px);
+}
+
+[data-animate="card"][data-position="right"] {
+  transform: translateX(50px);
+}
+
+[data-animate="card"][data-position="center"] {
+  transform: translateY(30px);
+}
+
+/* Stagger delays for text elements */
+[data-animate="text"][data-delay="1"] {
+  transition-delay: 0.1s;
+}
+[data-animate="text"][data-delay="2"] {
+  transition-delay: 0.2s;
+}
+[data-animate="text"][data-delay="3"] {
+  transition-delay: 0.3s;
+}
+[data-animate="text"][data-delay="4"] {
+  transition-delay: 0.4s;
+}
+[data-animate="text"][data-delay="5"] {
+  transition-delay: 0.5s;
+}
+
+/* Special animations for specific elements */
+[data-animate="fade-in"] {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+[data-animate="fade-in"].visible {
+  opacity: 1;
+}
+
+[data-animate="scale-in"] {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-animate="scale-in"].visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base animation styles for direct-animated elements */
+[data-animate] {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease;
+}
+
+[data-animate="center"] {
+  transform: translateY(30px);
+}
+[data-animate="left"] {
+  transform: translateX(-50px);
+}
+[data-animate="right"] {
+  transform: translateX(50px);
+}
+[data-animate="card"] {
+  transform: translateY(30px);
+}
+[data-animate="text"] {
+  transform: translateY(20px);
+}
+[data-animate].visible,
+.animated-line.visible {
+  opacity: 1;
+  transform: translate(0);
+  visibility: visible;
+}
+
+/* Styles for dynamically created animated lines */
+.animated-line {
+  opacity: 0;
+  /* transform will be set by JS based on data-animate type */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Faster animation */
+  display: inline-block; /* Crucial for transforms on inline text and correct line wrapping */
+  vertical-align: top; /* Helps align lines correctly */
+}
+
+/* Final state for all animated elements/lines */
+[data-animate].visible,
+.animated-line.visible {
+  opacity: 1;
+  transform: translate(0);
+  /* Transition already defined on .animated-line or set by JS for direct-animated elements */
+  visibility: visible; /* Make visible after animation starts */
+}
+
+/* Old animation classes (ensure they don't interfere if not used) */
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Left animation */
+[data-animate="left"] {
+  transform: translateX(-50px);
+}
+
+/* Center animation */
+[data-animate="center"] {
+  transform: translateY(30px);
+}
+
+/* Right animation */
+[data-animate="right"] {
+  transform: translateX(50px);
+}
+
+/* Animation states */
+[data-animate].visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Special case for trust badge icon */
+.trust-badge-icon[data-animate] {
+  opacity: 1 !important;
+  color: #b88746;
+  transform: translateX(-50px);
+}
+
+.trust-badge-icon[data-animate].visible {
+  transform: translate(0);
+  color: #33595E;
+}
+
+/* Text line animations */
+[data-animate] span {
+  display: block;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-animate].visible span {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Stagger delays for text elements */
+[data-animate] span:nth-child(1) {
+  transition-delay: 0.1s;
+}
+[data-animate] span:nth-child(2) {
+  transition-delay: 0.2s;
+}
+[data-animate] span:nth-child(3) {
+  transition-delay: 0.3s;
+}
+[data-animate] span:nth-child(4) {
+  transition-delay: 0.4s;
+}
+[data-animate] span:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+/* Responsive Animation Improvements */
+@media (max-width: 1024px) {
+  [data-animate] {
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .animated-line {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Reduce animation delays on tablets */
+  [data-animate-delay="100"] {
+    transition-delay: 50ms;
+  }
+  [data-animate-delay="200"] {
+    transition-delay: 100ms;
+  }
+  [data-animate-delay="300"] {
+    transition-delay: 150ms;
+  }
+  [data-animate-delay="400"] {
+    transition-delay: 200ms;
+  }
+  [data-animate-delay="500"] {
+    transition-delay: 250ms;
+  }
+}
+
+@media (max-width: 768px) {
+  [data-animate] {
+    transition: opacity 0.4s, transform 0.4s;
+  }
+
+  .animated-line {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Further reduce delays on mobile */
+  [data-animate-delay="100"] {
+    transition-delay: 25ms;
+  }
+  [data-animate-delay="200"] {
+    transition-delay: 50ms;
+  }
+  [data-animate-delay="300"] {
+    transition-delay: 75ms;
+  }
+  [data-animate-delay="400"] {
+    transition-delay: 100ms;
+  }
+  [data-animate-delay="500"] {
+    transition-delay: 125ms;
+  }
+
+  /* Mobile-specific transforms */
+  [data-animate="left"] {
+    transform: translateX(-30px);
+  }
+  [data-animate="right"] {
+    transform: translateX(30px);
+  }
+  [data-animate="center"] {
+    transform: translateY(20px);
+  }
+}
+
+@media (max-width: 480px) {
+  [data-animate] {
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .animated-line {
+    transition: all 0.2s ease-out;
+  }
+
+  /* Minimal delays on small screens */
+  [data-animate-delay] {
+    transition-delay: 0ms !important;
+  }
+
+  /* Smaller transforms for small screens */
+  [data-animate="left"] {
+    transform: translateX(-20px);
+  }
+  [data-animate="right"] {
+    transform: translateX(20px);
+  }
+  [data-animate="center"] {
+    transform: translateY(15px);
+  }
+}
+
+/* New subtle animations for missing elements */
+.navbar {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideInFromTop 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes slideInFromTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer animation */
+.footer {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.footer.visible {
+  opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Collaborators logo animation */
+.logo-track img {
+  opacity: 0;
+  animation: fadeInScale 0.6s ease-out forwards;
+}
+
+.logo-track img:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.logo-track img:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.logo-track img:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.logo-track img:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.logo-track img:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.logo-track img:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
+
+/* Course card hover enhancement */
+.course-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.course-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* FAQ item animation enhancement */
+.faq-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease-out;
+}
+
+.faq-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Teacher image subtle animation */
+.teacher-image {
+  overflow: hidden;
+}
+
+.teacher-image img {
+  transition: transform 0.6s ease-out;
+}
+
+.teacher-item:hover .teacher-image img {
+  transform: scale(1.05);
+}
+
+/* Contact form input focus animation */
+.contact-form input,
+.contact-form textarea,
+.about-form input {
+  transition: all 0.3s ease-out;
+  position: relative;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.about-form input:focus {
+  transform: translateY(-2px);
+}
+
+/* Button hover animations */
+.cta-button,
+.course-btn,
+.contact-form button,
+.about-form button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before,
+.course-btn::before,
+.contact-form button::before,
+.about-form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.cta-button:hover::before,
+.course-btn:hover::before,
+.contact-form button:hover::before,
+.about-form button:hover::before {
+  left: 100%;
+}
+
+/* Social links animation */
+.social-links a {
+  transition: all 0.3s ease-out;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px) rotate(5deg);
+}
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate],
+  .animated-line,
+  .navbar,
+  .footer,
+  .logo-track img,
+  .course-card,
+  .faq-item,
+  .teacher-image img,
+  .contact-form input,
+  .contact-form textarea,
+  .about-form input,
+  .cta-button,
+  .course-btn,
+  .contact-form button,
+  .about-form button,
+  .social-links a {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* Ensure smooth performance on all devices */
+[data-animate],
+.animated-line {
+  will-change: opacity, transform;
+}
+
+[data-animate].visible,
+.animated-line.visible {
+  will-change: auto;
+}
+
+[data-animate="fade-in-up"] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.6s ease;
+  filter: blur(4px);
+}
+
+[data-animate="fade-in-up"].visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}

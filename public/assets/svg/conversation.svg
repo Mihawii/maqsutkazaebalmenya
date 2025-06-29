@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="266" viewBox="0 0 560 266" fill="none">
+  <defs>
+    <linearGradient id="bubble-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#33595E"/>
+      <stop offset="100%" stop-color="#5a8a92"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="560" height="266" rx="25" fill="url(#bubble-gradient)" filter="url(#shadow)"/>
+  <!-- Parent bubble -->
+  <circle cx="46" cy="83" r="21" fill="white"/>
+  <circle cx="46" cy="83" r="20.5" stroke="#050A41" stroke-opacity="0.05"/>
+  <text x="36" y="89" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#333333">&#128100;</text>
+  <rect x="77" y="49" width="330" height="65" rx="16" fill="#fff"/>
+  <text x="100" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="bold" fill="#6B7280">Parent</text>
+  <text x="100" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#072c50">
+    <tspan x="100" dy="0">My child is stuck at this math level and</tspan>
+    <tspan x="100" dy="18">can't seem to improve. What can I do?</tspan>
+  </text>
+  <!-- Maqsadly reply bubble -->
+  <rect x="149" y="144" width="360" height="97" rx="22" fill="url(#bubble-gradient)" filter="url(#shadow)"/>
+  <text x="175" y="170" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">Maqsadly</text>
+  <text x="175" y="192" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#072c50">
+    <tspan x="175" dy="0">We provide personalized coaching and targeted</tspan>
+    <tspan x="175" dy="18">practice to help every student overcome their</tspan>
+    <tspan x="175" dy="18">learning plateau.</tspan>
+  </text>
+  <circle cx="514" cy="220" r="21" fill="url(#bubble-gradient)" filter="url(#shadow)"/>
+  <text x="504" y="228" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#fff">&#127891;</text>
+</svg> 

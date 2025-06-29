@@ -1,0 +1,173 @@
+/* Modal Backdrop */
+.brochure-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Box - Liquid Glass Effect */
+.brochure-modal {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(30, 64, 175, 0.18), 0 1.5px 8px rgba(30, 64, 175, 0.10);
+  max-width: 420px;
+  width: 90vw;
+  padding: 2.5rem 2rem 2rem 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: modal-fade-in 0.3s ease;
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.brochure-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.brochure-modal-close:hover {
+  color: #1a73e8;
+  background: rgba(26, 115, 232, 0.08);
+}
+
+.brochure-modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+.brochure-modal-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.brochure-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.brochure-modal-label {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: #222;
+}
+
+.brochure-modal-input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1.5px solid #e3e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.55);
+  transition: border 0.2s, background 0.2s;
+  box-shadow: 0 1px 4px rgba(30, 64, 175, 0.04);
+}
+.brochure-modal-input:focus {
+  border: 1.5px solid #1a73e8;
+  outline: none;
+  background: rgba(255,255,255,0.85);
+}
+
+.brochure-modal-submit {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.10);
+  width: 100%;
+}
+.brochure-modal-submit:hover {
+  background: #1558b0;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 900px) {
+  .brochure-modal {
+    max-width: 95vw;
+    width: 95vw;
+    padding: 2rem 1.2rem 1.5rem 1.2rem;
+  }
+  .brochure-modal-title {
+    font-size: 1.25rem;
+  }
+  .brochure-modal-subtitle {
+    font-size: 1rem;
+  }
+  .brochure-modal-label {
+    font-size: 0.97rem;
+  }
+}
+
+/* Phone responsiveness */
+@media (max-width: 600px) {
+  .brochure-modal {
+    max-width: 98vw;
+    width: 98vw;
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    border-radius: 18px;
+    gap: 1rem;
+  }
+  .brochure-modal-title {
+    font-size: 1.05rem;
+  }
+  .brochure-modal-subtitle {
+    font-size: 0.95rem;
+  }
+  .brochure-modal-label {
+    font-size: 0.93rem;
+  }
+  .brochure-modal-input {
+    font-size: 0.97rem;
+    padding: 0.8rem 0.7rem;
+    border-radius: 10px;
+  }
+  .brochure-modal-submit {
+    font-size: 1rem;
+    padding: 0.85rem 0;
+    border-radius: 10px;
+  }
+  .brochure-modal-close {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+} 

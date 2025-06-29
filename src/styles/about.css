@@ -1,0 +1,166 @@
+
+/* About Section */
+.about {
+  padding: 6rem 2rem;
+  background: var(--bg-secondary);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  /* Remove opacity/transform/animation for animation.css system */
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.about-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+
+.about-text p {
+  color: var(--text-middle);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.about-form {
+  background: var(--bg-secondary); 
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  /* Remove opacity/transform/animation for animation.css system */
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.about-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+.about-text h3,
+.about-text ul {
+  color: var(--text-start)!important;
+}
+
+.about-form input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.about-form input:focus {
+  outline: none;
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.about-form button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--text-primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-form button:hover {
+  background: var(--text-middle);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* About Icon */
+.about-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    animation: iconPop 1s infinite alternate;
+  }
+  
+  @keyframes iconPop {
+    0% { transform: scale(1);}
+    100% { transform: scale(1.15);}
+  }
+  
+  .about-icon-animate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: iconPop 1.2s infinite alternate;
+  }
+  @keyframes iconPop {
+    0% { transform: scale(1);}
+    100% { transform: scale(1.13);}
+  }
+
+
+/* About section feature */
+
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .about-feature {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    cursor: default !important;
+    transition: none !important;
+  }
+  .about-feature:hover {
+    background: none !important;
+    box-shadow: none !important;
+  }
+  
+  

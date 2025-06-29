@@ -1,0 +1,63 @@
+/* MIssion Seciton */
+.mission-section-minimal {
+    background: var(--bg-secondary);
+    padding: 80px 0 60px 0;
+    text-align: center;
+  }
+  /* class: mission-section-minimal */
+  
+  .mission-container-minimal {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  /* class: mission-container-minimal */
+  
+  .mission-icon {
+    margin-bottom: 24px;
+    /* stroke: var(--accent-orange); */
+    stroke: var(--primary-gradient-start);
+  }
+  /* class: mission-icon */
+  
+  .mission-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    /* color: var(--text-primary); */
+    color: var(--text-primary);
+    white-space: nowrap;
+  }
+  /* class: mission-title */
+  
+  .mission-underline {
+    width: 80px;
+    height: 4px;
+    /* background: linear-gradient(90deg, var(--primary-gradient-end) 0%, var(--accent-orange, #fdf5a6) 100%); */
+    background: linear-gradient(90deg, var(--primary-gradient-end) 0%, var(--primary-gradient-start, #fdf5a6) 100%);
+    margin: 0 auto 32px auto;
+    border-radius: 2px;
+  }
+  /* class: mission-underline */
+  
+  .mission-statement {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+  /* class: mission-statement */
+  
+  @media (max-width: 900px) {
+    .mission-title {
+      font-size: 2rem;
+    }
+  }
+  /* class: mission-title (responsive) */
+  
+  @media (max-width: 600px) {
+    .mission-title {
+      font-size: 1.1rem;
+    }
+  }
+  /* class: mission-title (responsive) */
