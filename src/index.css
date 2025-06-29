@@ -72,3 +72,21 @@ h1, h2, h3, h4, h5, h6, .cta-button {
   animation: fadeInUp 0.8s cubic-bezier(.4,2,.6,1);
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (max-width: 600px) {
+  html, body {
+    font-size: 15px;
+  }
+  .container, .about-container, .mission-container-minimal, .hero-section-inner, .faq-section, .teachers-section, .courses-section, .registration-section, .contact-section {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding: 0 0.7rem !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
+  }
+}
+

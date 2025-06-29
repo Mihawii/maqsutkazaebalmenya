@@ -1,4 +1,3 @@
-
 /* About Section */
 .about {
   padding: 6rem 2rem;
@@ -163,4 +162,40 @@
     box-shadow: none !important;
   }
   
+  
+@media (max-width: 700px) {
+  .about {
+    padding: 2.5rem 0.5rem;
+  }
+  .about-container {
+    max-width: 100vw;
+    padding: 0 0.5rem;
+  }
+  .about-header h2 {
+    font-size: 1.3rem;
+  }
+  .about-header p {
+    font-size: 1rem;
+  }
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-form {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .about-form h3 {
+    font-size: 1.1rem;
+  }
+  .about-form input {
+    padding: 0.7rem;
+    font-size: 0.97rem;
+  }
+  .about-form button {
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
+}
+
   
